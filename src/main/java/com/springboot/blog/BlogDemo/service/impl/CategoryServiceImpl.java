@@ -70,4 +70,10 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.delete(category);
 
     }
+
+    public List<CategoryDto> mapCategoriesToDto(List<Category> categories, ModelMapper modelMapper) {
+        return categories.stream()
+                .map(category -> modelMapper.map(category, CategoryDto.class))
+                .collect(Collectors.toList());
+    }
 }

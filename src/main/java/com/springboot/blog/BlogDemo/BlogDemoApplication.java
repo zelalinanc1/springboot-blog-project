@@ -1,10 +1,12 @@
 package com.springboot.blog.BlogDemo;
 
+import com.springboot.blog.BlogDemo.entity.Role;
+import com.springboot.blog.BlogDemo.repository.RoleRepository;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.modelmapper.ModelMapper;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +23,9 @@ import org.springframework.context.annotation.Bean;
 				url = "https://github.com/zelalinanc1/springboot-blog-project"
 		)
 )
-public class BlogDemoApplication {
+public class BlogDemoApplication  {
+
+
 
 	@Bean
 	public ModelMapper modelMapper() {
@@ -31,5 +35,6 @@ public class BlogDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BlogDemoApplication.class, args);
 	}
+
 
 }
