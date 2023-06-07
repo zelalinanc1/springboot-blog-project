@@ -27,7 +27,6 @@ public class PostRepositoryTests {
     private Post post;
     private Post savedPost;
 
-
     private Category category;
     private Category savedCategory;
 
@@ -53,7 +52,6 @@ public class PostRepositoryTests {
          savedPost = postRepository.save(post);
 
 
-
     }
 
 
@@ -67,8 +65,6 @@ public class PostRepositoryTests {
     }
     @Test
     public void givenPostObject_whenFindById_thenReturnPostObject() {
-
-
 
         Post returnedPost=postRepository.findById(savedPost.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("Post","id",savedPost.getId()));

@@ -35,7 +35,6 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class PostServiceTests {
 
-
     private PostServiceImpl postService;
 
     private PostRepository postRepository;
@@ -49,8 +48,6 @@ public class PostServiceTests {
         postRepository = Mockito.mock(PostRepository.class);
         modelMapper = Mockito.mock(ModelMapper.class);
         postService = new PostServiceImpl(postRepository,categoryRepository,modelMapper);
-
-
 
     }
 

@@ -1,14 +1,14 @@
 package com.springboot.blog.BlogDemo.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
+@EqualsAndHashCode
 @Table(name="comments")
 public class Comment {
     @Id
